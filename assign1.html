@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Info</title>
+    <script>
+        function saveData() {
+            
+            var greetto=document.getElementById("greetto").value;
+            var greetfrom=document.getElementById("greetfrom").value;
+            var greetings=document.getElementById("greetings").value;
+            
+
+            localStorage.setItem("greetto",greetto)
+            localStorage.setItem("greetfrom",greetfrom)
+            localStorage.setItem("greet",greetings)
+
+        }
+        
+        </script>
+        <style>
+            form {
+                color: blue;
+                width: 100px;
+                height: 100px;
+                background-color: coral;
+
+            }
+            label{
+                display: inline-block;
+  width: 140px;
+  text-align: right;
+            }
+            input,textarea{
+                width: 100px;
+                
+                background-color: lightcoral;
+                color: darkmagenta;
+                box-sizing: content-box;
+                
+                border-radius: 10%;
+            }
+        </style>
+</head>
+<body>
+    <img src="doll.png" width="500" height="200px">
+    <table>
+        <form>
+           <fieldset style="background-image: url('balloon.png'); background-repeat:space;" >
+               <legend style="background-color: magenta;">Greeting Card</legend>
+            <label>To</label>
+            <input type="text" id="greetto" minlength="1" maxlength="20" placeholder="Greet to" required />
+            <br/>
+            <label >From</label>
+            <input type="text" id="greetfrom" minlength="1" maxlength="20" placeholder="Greet from" required />
+            <br/>
+            <label>Greetings</label>
+            <textarea name=greetings rows="5" cols="20" placeholder="Write your words!"></textarea>
+          
+    <input  type="submit" value="Submit" id="s1" onclick="saveData()"/>
+    <input type="reset" value="Refresh and Write again " id="np" />
+    <a href="showgreet1.html">Show Data</a>
+
+
+    </fieldset>
+
+        </form>
+    </table> 
+</body>
+</html>
