@@ -1,0 +1,36 @@
+
+
+<h1>Leave List</h1>
+<table  class="table table-bordered">
+    <tr>
+
+        <th class="table-primary" scope="col">Empid</th>
+        <th  class="table-primary"scope="col">BankaccountNo</th>
+        <th  class="table-primary"scope="col">Basicpay</th>
+        <th class="table-primary"scope="col">HRA</th>
+        <th class="table-primary"scope="col">Medicalallowance</th>
+        <th class="table-primary" scope="col">Tax</th>
+        <th class="table-primary" scope="col">Bonus</th>
+        <th class="table-primary" scope="col">Noofworkdays</th>
+        <th class="table-primary" scope="col">Grosspay</th>
+        <th class="table-primary" scope="col">Pfno</th>
+    </tr>
+
+    <tbody>
+        <tr *ngFor="let sd of payrollist">
+            <td>{{sd.Empid}}</td>
+            <td>{{sd.BankaccountNo}}</td>
+            <td>{{sd.Basicpay}}</td>
+            <td>{{sd.HRA}}</td>
+            <td>{{sd.Medicalallowance}}</td>
+            <td>{{sd.Tax}}</td>
+            <td>{{sd.Bonus}}</td>
+            <td>{{sd.Noofworkdays}}</td>
+            <td>{{sd.Grosspay}}</td>
+            <td>{{sd.Pfno}}</td>
+            
+            
+        </tr>
+    </tbody>
+</table>
+<button (click)="addpay()">Add PayRoll</button>
