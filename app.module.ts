@@ -19,6 +19,8 @@ import { UpdateemployeeComponent } from './updateemployee/updateemployee.compone
 import { LeavemanagementComponent } from './leavemanagement/leavemanagement.component';
 import { PayrollComponent } from './payroll/payroll.component';
 import { AddpayrollComponent } from './addpayroll/addpayroll.component';
+import { EmployeeloginComponent } from './employeelogin/employeelogin.component';
+import { HomeforempComponent } from './homeforemp/homeforemp.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +31,9 @@ import { AddpayrollComponent } from './addpayroll/addpayroll.component';
     UpdateemployeeComponent,
     LeavemanagementComponent,
     PayrollComponent,
-    AddpayrollComponent
+    AddpayrollComponent,
+    EmployeeloginComponent,
+    HomeforempComponent
   ],
   imports: [
     BrowserModule,

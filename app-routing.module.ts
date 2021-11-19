@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { EmployeeComponent } from './employee/employee.component';
@@ -10,6 +10,8 @@ import { LeavemanagementComponent } from './leavemanagement/leavemanagement.comp
 import { PayrollService } from './payroll.service';
 import { PayrollComponent } from './payroll/payroll.component';
 import { AddpayrollComponent } from './addpayroll/addpayroll.component';
+import { EmployeeloginService } from './employeelogin.service';
+import { EmployeeloginComponent } from './employeelogin/employeelogin.component';
 const routes: Routes = [
   {path:'LoginPage',component:LoginComponent},
   {path:'employee',component:EmployeeComponent},
@@ -19,7 +21,8 @@ const routes: Routes = [
 {path:'updateemployee',component:UpdateemployeeComponent},
 {path:'leavemanagement',component:LeavemanagementComponent},
 {path:'payroll',component:PayrollComponent},
-{path:'addpayroll',component:AddpayrollComponent}
+{path:'addpayroll',component:AddpayrollComponent},
+{path:'employeelogin' ,component:EmployeeloginComponent}
   
 ];
 export default routes;
