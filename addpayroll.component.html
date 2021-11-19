@@ -1,0 +1,47 @@
+<form #loginfrm="ngForm" class="form-group" (ngSubmit)="addpr(loginfrm.value)" >
+    <fieldset>
+        <label>Enter Employee ID</label>
+       <input type="number" [(ngModel)]="adde.Empid" id="" name="Empid"/>
+       <br/>
+       <label>Enter Bank Account Number:</label>
+       <input type="number" [(ngModel)]="adde.BankaccountNo" id="" name="BankaccountNo"/>
+       <br/>
+
+       <label >Enter Basic pay</label>
+       <input type="number" [(ngModel)]="adde.Basicpay" id="" name="Basicpay"/>
+       <br/>
+
+       <label >HRA</label>
+       <input type="number" [(ngModel)]="adde.HRA" id="" name="HRA"/>
+       <br/>
+
+       <label >Medical Allowance</label>
+       <input type="number" [(ngModel)]="adde.Medicalallowance" id="" name="Medicalallowance"/>
+       <br/>
+
+       <label >Tax</label>
+       <input type="number" [(ngModel)]="adde.Tax" id="" name="Tax"/>
+       <br/>
+
+       <label >Bonus</label>
+       <input type="number" [(ngModel)]="adde.Bonus" id="" name="Bonus"/>
+       <br/>
+
+       <label >No ofWorking Days</label>
+       <input type="number" [(ngModel)]="adde.Noofworkdays" id="" name="Noofworkdays"/>
+       <br/>
+      
+       <br/>
+       <label>Grosspay</label>
+       <input type="number" [(ngModel)]="adde.Grosspay" id="" name="Grosspay"/>
+       <br/>
+
+       <label>Pf Number</label>
+       <input type="number" [(ngModel)]="adde.Pfno" id="" name="Pfno"/>
+       <br/>
+       
+       
+
+       <input type="submit" class="btn btn-primary" name="vu"/>
+    </fieldset>
+</form>
