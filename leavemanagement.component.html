@@ -1,0 +1,28 @@
+<h1>Leave List</h1>
+<table  class="table table-bordered">
+    <tr>
+
+        <th class="table-primary" scope="col">EmployeeID</th>
+        <th  class="table-primary"scope="col">TotalLeave</th>
+        <th  class="table-primary"scope="col">BalanceLeave</th>
+        <th class="table-primary"scope="col">CasualLeave</th>
+        <th class="table-primary"scope="col">EarnedLeave</th>
+        <th class="table-primary" scope="col">UnpaidLeave</th>
+       
+        
+
+    </tr>
+
+    <tbody>
+        <tr *ngFor="let sd of leavelist">
+            <td>{{sd.EmpId}}</td>
+            <td>{{sd.TotalLeave}}</td>
+            <td>{{sd.BalanceLeave}}</td>
+            <td>{{sd.CasualLeave}}</td>
+            <td>{{sd.EarnedLeave}}</td>
+            <td>{{sd.UnpaidLeave}}</td>
+            
+            
+        </tr>
+    </tbody>
+</table>
