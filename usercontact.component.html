@@ -1,0 +1,52 @@
+<p>usercontact works!</p>
+<form [formGroup]="contactForm"  (ngSubmit)="submitData()" #f1="ngForm" >
+
+    <legend>ContactForm</legend>
+    <label id="fname">Enter FirstName:</label>
+  
+    <input type="text"  id="txtfname" name="firstname" formControlName="firstname" [formControl]="firstname" /><br/>
+    <div [hidden]="firstname.valid || firstname.untouched" class="error">
+       
+        <div [hidden]="!firstname.hasError('required')">
+            Firstname is required</div>
+            <div [hidden]="!firstname.hasError('minlength')">
+                Firstname cannot be less than 5 chars</div>
+    </div>
+    <label id="lname">Enter LastName:</label>
+    <input type="text" id="txtlname" name="lastname" formControlName="lastname" [formControl]="lastname" /><br/>
+    <div [hidden]="lastname.valid || lastname.untouched" class="error">
+      
+        <div [hidden]="!lastname.hasError('required')">
+            Lastname is required</div>
+            <div [hidden]="!lastname.hasError('minlength')">
+                Lastname cannot be less than 5 chars
+            </div>
+
+    </div>
+    <label id="email" class="form-group">Enter EmailId:</label>
+    <input type="text" id="txtemail" name="email" formControlName="email" [formControl]="email" required/><br/>
+    <div [hidden]="email.valid || email.untouched" class="error">
+        <div [hidden]="!email.hasError('email')">
+            Incorrect email format
+        </div>
+    </div>
+    <!-- <div  *ngIf="!contactForm.controls['firstname']?.valid && (contactForm.controls['firstname']?.dirty
+    ||contactForm.controls['firstname']?.touched)">Firstname is required</div>
+    
+    <label id="email" class="form-group">Enter EmailId:</label>
+    <input type="text" id="txtemail" name="Email" formControlName="email"/><br/>
+    <label id="pno" class="form-group">Enter Contact No:</label>
+    <input type="number" id="txtpno" name="ContactNo" formControlName="phoneno"/><br/>
+    <label id="gender" class="form-group">Select Gender:</label>
+    <select formControlName="gender">
+        <option *ngFor="let gender of g1"
+        [value]="gender">{{gender}}</option> 
+    </select><br/> 
+     <label id="country" class="form-group">Select Country:</label>
+     <input type="text" id="txtctry" name="Country" formControlName="country" /><br/>
+    <select formControlName="country">
+        <option *ngFor="let country of countries"
+        [value]="country">{{country}}</option> 
+    </select><br/>    -->
+    <input type="submit" [disabled]="!contactForm.valid" value="Submit"/>
+</form>
